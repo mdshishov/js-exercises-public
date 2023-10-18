@@ -79,5 +79,6 @@ console.log('Задание 5');
 console.log(flipOver('hello'));
 console.log(flipOver('swap'));
 console.log(flipOver('John Doe'));
+console.log();
 
 export { getSymbol, removeDigit, isSquare, numberLength, flipOver };
