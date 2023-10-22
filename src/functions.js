@@ -17,13 +17,22 @@ console.log(makePositive(0));
 console.log(makePositive(-0.12));
 console.log('');
 
-// Задание 2
 
-// Оригинал задачи с codewars Создайте функцию, которая будет возвращать оператор приветствия, использующий входные данные; ваша программа должна возвращать, 'Hi !'. Если передаётся пустая строка - возвращается 'Hi!'
+// Задание 2
+// Создайте функцию, которая будет возвращать оператор приветствия, использующий входные данные; ваша программа должна возвращать, 'Hi !'. Если передаётся пустая строка - возвращается 'Hi!'
 
 // greet('John'); ➞ 'Hi John!'
 // greet('Elise'); ➞ 'Hi Elise!'
 // greet(''); ➞ 'Hi!'
+
+const greet = (name) => name ? `Hi ${name}!` : 'Hi!'
+
+console.log('Задание 2');
+console.log(greet('John'));
+console.log(greet('Elise'));
+console.log(greet(''));
+console.log('');
+
 
 // Задание 3
 
@@ -57,4 +66,4 @@ console.log('');
 // basicOp('1-2'); ➞ -1
 // basicOp('3*2'); ➞ 6
 
-export { makePositive };
+export { makePositive, greet };
