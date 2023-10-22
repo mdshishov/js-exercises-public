@@ -35,7 +35,6 @@ console.log('');
 
 
 // Задание 3
-
 // Создать функцию, которая принимает имя и фамилию пользователя, а возвращает имя и первую букву фамилии.
 
 // getShotFullName('Oliver', 'Smith'); ➞ 'Oliver S.'
@@ -43,6 +42,17 @@ console.log('');
 // getShotFullName('Harry', 'Williams'); ➞ 'Harry W.'
 // getShotFullName('Jacob', 'Brown'); ➞ 'Jacob B.'
 // getShotFullName('Charley', 'Jones'); ➞ 'Charley J.'
+
+const getShotFullName = (name, surname) => `${name} ${surname[0]}.`
+
+console.log('Задание 3');
+console.log(getShotFullName('Oliver', 'Smith'));
+console.log(getShotFullName('Jack', 'Johnson'));
+console.log(getShotFullName('Harry', 'Williams'));
+console.log(getShotFullName('Jacob', 'Brown'));
+console.log(getShotFullName('Charley', 'Jones'));
+console.log('');
+
 
 // Задание 4
 
@@ -66,4 +76,4 @@ console.log('');
 // basicOp('1-2'); ➞ -1
 // basicOp('3*2'); ➞ 6
 
-export { makePositive, greet };
+export { makePositive, greet, getShotFullName };
