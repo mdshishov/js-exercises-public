@@ -104,7 +104,7 @@ const basicOp = (str) => {
     }
   }
 
-  const a = Number(str, opPos);
+  const a = Number(str.slice(0, opPos));
   const b = Number(str.slice(opPos + 1));
 
   if (str[opPos] === '+') {
