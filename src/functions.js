@@ -94,6 +94,7 @@ console.log('');
 // basicOp('1-2'); ➞ -1
 // basicOp('3*2'); ➞ 6
 
+/* Старое решение
 const basicOp = (str) => {
   let opPos = 0;
 
@@ -113,6 +114,26 @@ const basicOp = (str) => {
     return a - b;
   } else {
     return a * b;
+  }
+};
+*/
+
+const basicOp = (str) => {
+  for (let i = 1; i < str.length; i += 1) {
+    if ((str[i] === '+') || (str[i] === '-') || (str[i] === '*')) {
+      const num1 = Number(str.split(str[i])[0]);
+      const num2 = Number(str.split(str[i])[1])
+      switch (str[i]) {
+        case '+':
+          return num1 + num2;
+        case '-':
+          return num1 - num2;
+        case '*':
+          return num1 * num2;
+        default:
+          throw new Error('Такой вариант вообще не должен произойти');
+      }
+    }
   }
 };
 
