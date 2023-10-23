@@ -102,8 +102,8 @@ const basicOp = (str) => {
     }
   }
 
-  num1 = Number(str.slice(0, opPos));
-  num2 = Number(str.slice(opPos + 1));
+  const num1 = Number(str.slice(0, opPos));
+  const num2 = Number(str.slice(opPos + 1));
   
   switch (str[opPos]) {
     case '+':
