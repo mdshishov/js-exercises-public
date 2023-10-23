@@ -67,17 +67,17 @@ console.log('');
 // neutralise("fttf", "ftft") ➞ "ft.."
 
 const neutralise = (str1, str2) => {
-    if (str1.length !== str2.length) {
-        return '-';
-    }
+  if (str1.length !== str2.length) {
+    return '-';
+  }
 
-    let res = '';
+  let res = '';
     
-    for (let i = 0; i < str1.length; i += 1) {
-        res += str1[i] === str2[i] ? str1[i] : '.';
-    }
+  for (let i = 0; i < str1.length; i += 1) {
+    res += str1[i] === str2[i] ? str1[i] : '.';
+  }
 
-    return res;
+  return res;
 };
 
 console.log('Задание 4');
@@ -88,11 +88,38 @@ console.log('');
 
 
 // Задание 5
-
-// Оригинал задачи с codewars; Ваша задача - создать функцию, которая выполняет три основные математические операции и возвращает результат вычисления. Функция должна принимать строку, представляющую арифметическое выражение. Функция должна возвращать результат вычисления после применения выбранной операции. Операции: +,-,*
+// Ваша задача - создать функцию, которая выполняет три основные математические операции и возвращает результат вычисления. Функция должна принимать строку, представляющую арифметическое выражение. Функция должна возвращать результат вычисления после применения выбранной операции. Операции: +,-,*
 
 // basicOp('4+7'); ➞ 11
 // basicOp('1-2'); ➞ -1
 // basicOp('3*2'); ➞ 6
 
-export { makePositive, greet, getShotFullName, neutralise };
+const basicOp = (str) => {
+  let opPos = 0;
+
+  for (let i = 1; i < str.length; i += 1) {
+    if (!Number(str[i])) {
+        opPos = i;
+        break;
+    }
+  }
+
+  const a = Number(str, opPos);
+  const b = Number(str.slice(opPos + 1));
+
+  if (str[opPos] === '+') {
+    return a + b;
+  } else if (str[opPos] === '-') {
+    return a - b;
+  } else {
+    return a * b;
+  }
+};
+
+console.log('Задание 5');
+console.log(basicOp('4+7'));
+console.log(basicOp('1-2'));
+console.log(basicOp('3*2'));
+console.log('');
+
+export { makePositive, greet, getShotFullName, neutralise, basicOp };
